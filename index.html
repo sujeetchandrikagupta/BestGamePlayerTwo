@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Team Spinner Game</title>
+  <link rel="stylesheet" href="CSS/styel.css">
+</head>
+<body>
+  <header>
+    <h1>Cricket Team Spinner Game</h1>
+  </header>
+
+  <main>
+    <section id="team-selection">
+      <h2>Select a Team</h2>
+      <select id="team-dropdown" onchange="showPlayers(this.value)">
+        <option value="">-- Select Team --</option>
+        <option value="MI">Mumbai Indians (MI)</option>
+        <option value="CSK">Chennai Super Kings (CSK)</option>
+        <option value="RR">Rajasthan Royals (RR)</option>
+        <option value="RCB">Royal Challengers Bangalore (RCB)</option>
+        <option value="KKR">Kolkata Knight Riders (KKR)</option>
+        <option value="DC">Delhi Capitals (DC)</option>
+        <option value="PBKS">Punjab Kings (PBKS)</option>
+        <option value="SRH">Sunrisers Hyderabad (SRH)</option>
+        <option value="LSG">Lucknow Super Giants (LSG)</option>
+        <option value="GT">Gujarat Titans (GT)</option>
+      </select>
+    </section>
+
+    <section id="players-section">
+      <h2>Players</h2>
+      <div id="players"></div>
+      <button onclick="addSelectedPlayers()">Add Selected Players to Spinner</button>
+    </section>
+
+    <section id="selected-players-section">
+      <h2>Selected Players for Spinner</h2>
+      <ul id="selected-list"></ul>
+    </section>
+
+    <section id="add-player-section">
+      <h2>Add Player to Selected Team</h2>
+      <input type="text" id="new-player-name" placeholder="Enter Player Name">
+      <button onclick="addPlayerToTeam()">Add Player</button>
+    </section>
+
+    <section id="add-team-section">
+      <h2>Add New Team</h2>
+      <input type="text" id="new-team-name" placeholder="Enter Team Name">
+      <button onclick="addNewTeam()">Add Team</button>
+    </section>
+
+    <section id="spinner-section">
+      <h2>Spin the Wheel</h2>
+      <div id="spinner"></div>
+      <button id="spinButton" onclick="startSpin()">Spin</button>
+      <p id="endMessage"></p>
+    </section>
+
+    <section id="best-players-section">
+      <h2>Best Selected Players</h2>
+      <ul id="best-players-list"></ul>
+    </section>
+  </main>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
